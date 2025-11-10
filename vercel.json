@@ -22,9 +22,9 @@
       ]
     }
   ],
-  "public": {
-    "dir": "public"
-  },
+  "public": true,
+  "outputDirectory": "public",
+  "dir": "public",
   "routes": [
     {
       "src": "/(.*)",
