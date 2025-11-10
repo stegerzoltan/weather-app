@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Időjárás App</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="weather-container">
+        <h1>Időjárás Lekérdezés</h1>
+
+        <div class="search-box">
+            <input type="text" id="city-input" placeholder="Írd be a város nevét...">
+            <button id="search-button">Keresés</button>
+        </div>
+
+        <div id="error-message" class="error-message"></div>
+
+        <div id="weather-display" class="weather-info hidden">
+            
+            <div class="main-weather-section">
+                <img id="weather-icon" src="" alt="Időjárás ikon" class="weather-icon">
+                
+                <div class="temp-group">
+                    <span id="temperature" class="temperature">--</span>
+                    <span class="unit">°C</span>
+                </div>
+            </div>
+
+            <div id="city-name" class="city-name">--</div>
+            <div id="description" class="description">--</div>
+
+            <div class="details-grid">
+                <div class="detail-card">
+                    <i class="fas fa-tint"></i>
+                    <p>Páratartalom</p>
+                    <span id="humidity">--</span>
+                    <span>%</span>
+                </div>
+                <div class="detail-card">
+                    <i class="fas fa-wind"></i>
+                    <p>Szélsebesség</p>
+                    <span id="wind-speed">--</span>
+                    <span>m/s</span>
+                </div>
+                <div class="detail-card">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <p>Nyomás</p>
+                    <span id="pressure">--</span>
+                    <span>hPa</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
