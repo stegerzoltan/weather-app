@@ -1,9 +1,7 @@
 {
-    "public": true,
-
   "rewrites": [
     {
-      "source": "/api/(.*)",
+      "source": "/api/weather",
       "destination": "/api/weather"
     }
   ],
@@ -12,5 +10,8 @@
       "src": "api/*.js",
       "use": "@vercel/node"
     }
-  ]
+  ],
+  "public": {
+    "dir": "public"
+  }
 }
