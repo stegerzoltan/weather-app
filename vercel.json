@@ -1,17 +1,34 @@
 {
-  "rewrites": [
-    {
-      "source": "/api/weather",
-      "destination": "/api/weather"
-    }
-  ],
   "builds": [
     {
       "src": "api/*.js",
       "use": "@vercel/node"
     }
   ],
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/weather"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    }
+  ],
   "public": {
     "dir": "public"
-  }
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/public/$1"
+    }
+  ]
 }
