@@ -1,10 +1,4 @@
 {
-  "builds": [
-    {
-      "src": "api/*.js",
-      "use": "@vercel/node"
-    }
-  ],
   "rewrites": [
     {
       "source": "/api/(.*)",
@@ -20,13 +14,6 @@
           "value": "public, max-age=0, must-revalidate"
         }
       ]
-    }
-  ],
-  "public": true,
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/public/$1"
     }
   ]
 }
